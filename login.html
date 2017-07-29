@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<style type="text/css">
+		#box{
+			width: 40%;
+			height: 400px;
+			background-color: grey;
+			margin-left: 30%;
+			margin-top: 9%;
+			border-radius: 3%;
+		}
+		img{
+			width: 30%;
+			height: 30%;
+			border-right: 50%;
+			margin-left: 32%;
+			/*margin-top: %;*/
+		}
+		input{
+			width: 60%;
+			height: 15%;
+			margin-left: 18%;
+			font-size: 25px;
+			padding-left: 2%;
+		}
+		button{
+			width: 25%;
+			height: 10%;
+			margin-left: 35%;
+			font-size: 25px;
+		}
+		#une{
+			text-decoration-color: red;
+			text-align: center;
+		}
+		#pwd{
+			text-decoration-color: red;
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+
+ <div id="box">
+ <form name="loginform">
+
+ 	<img src="usericon.png"><br><br>
+ 	<input type="text" name="unametxt" placeholder="Entername"><br><br>
+ 	<div id="une"> </div>
+
+ 	<input type="text" name="pwdtxt" placeholder="Password"><br><br>
+ 	<div id="une"> </div>
+ 	
+ 
+ 
+ </form>
+ <button onclick="regvalidate()">Login</button>
+ </div>
+
+  <script type="text/javascript">
+	 function regvalidate(){
+	 	if(document.loginform.unametxt.value=="")
+	  {
+	  document.getElementById('une').innerHTML = "User name field should not be empty";
+	  loginform.unametxt.focus();
+	  return(false);
+	 }
+	 if(document.loginform.pwdtxt.value=="")
+	   {
+	  document.getElementById('une').innerHTML = "Please type a password";
+	  loginform.pwdtxt.focus();
+	  return(false);
+	   }
+
+
+	 }
+ 	
+ 	
+ </script>
+</body>
+</html>

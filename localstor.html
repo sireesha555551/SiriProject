@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+</head>
+<body>
+   <form id="f1">
+   <label>FirstName</label>
+      <input type="text" id="txtfname"></form><br><br>
+      <label>LastName</label>
+      <input type="text" id="txtlname"></form><br><br>
+      <input type="submit" id="addfname" value="Add" onclick="addDetails()" />
+    <input type="submit" id="displayfname" value="Display" onclick="display()" />
+
+      </form>
+      <div id="Display"></div>
+</body>
+<script type="text/javascript">
+ var data=[];
+ var fname=document.getElementById('txtfname');
+ var lname=document.getElementById('txtlname');
+ var displayBox=document.getElementById('Display');
+ function addDetails(){
+    var  FirstName=fname.value;
+     var LastName=lname.value;
+     
+      data.push(JSON.stringify({
+      FirstName:FirstName,
+      LastName:LastName
+     }));
+      localStorage.setItem("data", JSON.stringify(data));
+  }
+ function display(){
+        displayBox.innerHTML="";
+  data.forEach(function(e){
+     var disobj = JSON.parse(e);
+   displayBox.innerHTML += disobj.FirstName + " " + disobj.LastName + " ";
+                 
+        console.log(e);
+  });
+  var storedNames = JSON.parse(localStorage.getItem("data"));
+  console.log(storedNames);
+ }
+ </script>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>REGISTRATION PAGE</title>
+	<style type="text/css">
+		#regis{
+			border-style: groove;
+			width: 33%;
+			margin-top: 122px;
+			margin-left:491px; 		
+			padding-top: 30px;
+			padding-left: 100px;
+			padding-bottom: 40px;
+		}
+		#submitBtn{
+			margin-left: 150px;
+		}
+		/*.spanerr{
+			color: red;
+			display: none;
+		}*/
+		input{
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div id="regis">
+
+	<form id="form1" name="form1" onclick="error()">
+		<h1>REGISTRATION FORM</h1>
+
+		<input type="text" id="firstName" class="inputField" placeholder="Enter first name">
+		<span id="spanerr" class="spanerr">this field is required</span> 
+		
+		<input type="text" id="lastName" class="inputField" placeholder="Enter last name"><br><br><span class="spanerr">this field is required</span>
+		
+		<input type="text" id="emailId" class="inputField" placeholder=" Enter email id">
+	    <span class="spanerr">this field is required</span>
+
+	    <input type="number" class="inputField" id="phoneNumber" placeholder="Mobile Number"><br><br>
+		<span class="spanerr">this field is required</span>
+
+		<textarea rows="4" cols="50" placeholder="Address" class="inputField" id="address"></textarea><br><br>
+		 <span class="spanerr">this field is required</span>
+
+		<input type="text" class="inputField" id="city" placeholder="city">
+		<span class="spanerr">this field is required</span>
+
+		<input type="text" class="inputField" id="state" placeholder="state"><br><br>
+		<span class="spanerr">this field is required</span> 
+
+	<div class="button">
+		<input type="button" value="submit" id="submitBtn" onclick="error()">	
+	</div>
+
+	</form>
+		
+	
+	</div>
+	<script type="text/javascript" src="validation.js"></script>
+</body>
+</html>

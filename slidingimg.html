@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sliding image</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+<h2>MYWEBSITE</h2>
+<!-- <div class="sideimg">
+	<img src="side.jpg">
+</div> -->
+<div id="list">
+<ul>
+	<li><a href="login.html">LOGIN</a></li>
+	<li><a href="guideTsk.html">REGISTRATION</a></li>
+	<li><a href="home.html">HOME</a></li>
+
+</ul>
+</div>
+</div>
+	
+</div>
+<div id="middle">
+<img name="slide" width="100%" height="400">
+</div>
+<div id="middle_1">
+	<div class="block">
+	<img src="p1.jpg" height="220.34">
+	<p>A student or pupil is a learner or someone who attends an educational institution. In Britain, those attending university are termed "students". In the United State, both categories: school and university students,each of whom perform 
+	each of whom perform separate and critical functions.</p>
+
+</div>
+<div class="block">
+	<img src="p2.jpg" height="220.34">
+
+	<p>Asking people to leave a company after they have put in years of service is one of the most unpleasant tasks that a senior manager has to undertake. Unfortunately, layoffs are a part of corporate life and are likely to remain a common phenomenon in America.</p>
+</div>
+<div class="block">
+	<img src="p3.jpg" height="220.34">
+	<p>The organizational chart or the structure of the company and the relationships of the jobs and responsibilities, from the top down, may be CEO, Vice President, Director, then Manager, each of whom perform separate and critical functions.
+	each of whom perform separate and critical functions.</p>
+</div>
+
+</div>
+<div id="footer">
+	<div class="footer1">
+	<p>powered by siri</p>
+</div>
+</div>
+<script type="text/javascript">
+ var i=0;
+ var images=[];
+ var time=3000;
+ images[0]="image1.jpg ";
+ images[1]="image2.jpg";
+ images[2]="image3.jpg";
+ function changeimg(){
+ 	
+ 	if(i<images.length){
+ 		document.slide.src=images[i];
+ 		i++;
+ 	}
+ 	else{
+ 		i=0;
+ 		document.slide.src=images[i];
+ 	}
+ 	setTimeout("changeimg()",time);
+ }
+ window.onload=changeimg;
+	
+</script>
+
+</body>
+</html>
